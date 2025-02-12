@@ -23,7 +23,7 @@ let starSketch = (p) => {
   };
 
   p.windowResized = () => {
-    p.resizeCanvas(p.windowWidth, p.windowHeight); // Ajuste conforme necessário
+    p.resizeCanvas(p.windowWidth, p.windowHeight);
   };
 
   class Ring {

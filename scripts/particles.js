@@ -2,7 +2,7 @@ let particlesSketch = (p) => {
   let particles = [];
 
   p.setup = () => {
-    let cnv = p.createCanvas(p.windowWidth, p.windowHeight);
+    let cnv = p.createCanvas(p.windowWidth, document.documentElement.scrollHeight);
     for (let i = 0; i < 150; i++) {
       particles.push(new Particle());
     }
@@ -17,7 +17,7 @@ let particlesSketch = (p) => {
   };
 
   p.windowResized = () => {
-    p.resizeCanvas(p.windowWidth, p.windowHeight);
+    p.resizeCanvas(p.windowWidth,document.documentElement.scrollHeight);
   };
 
   class Particle {
