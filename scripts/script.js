@@ -8,7 +8,7 @@ const projects = [
     {
         "title": "Cache Server",
         "description": "A cache server made in Java for study purposes.",
-        "url": "/projects/cache_server.html",
+        "url": "/my-page/projects/cache_server.html",
         "article": true
     },
     {
