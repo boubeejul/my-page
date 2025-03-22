@@ -6,35 +6,47 @@ let containerDescription = document.querySelector("#container-description")
 
 const projects = [
     {
+        "title": "Cache Server",
+        "description": "A cache server made in Java for study purposes.",
+        "url": "/projects/cache_server.html",
+        "article": true
+    },
+    {
         "title": "News Headlines Bot",
         "description": "A simple Telegram bot using Python and NewsAPI.",
-        "url": "https://github.com/boubeejul/news-headlines-bot"
+        "url": "https://github.com/boubeejul/news-headlines-bot",
+        "article": false
     },
     {
         "title": "Solar System",
         "description": "A solar system made with OpenGL for Introduction to Computer Graphics class.",
-        "url": "https://github.com/boubeejul/solar-system-opengl"
+        "url": "https://github.com/boubeejul/solar-system-opengl",
+        "article": false
     },
     {
         "title": "Pong",
         "description": "Pong game made with raylib and C++.",
-        "url": "https://github.com/boubeejul/pong"
+        "url": "https://github.com/boubeejul/pong",
+        "article": false
     },
     {
         "title": "My Star Wars Marathon",
         "description": "An application to manage Star Wars Marathons, made with React, Java and Spring.",
-        "url": "https://github.com/boubeejul/mystarwarsmarathon"
+        "url": "https://github.com/boubeejul/mystarwarsmarathon",
+        "article": false
     },
     {
         "title": "Eldritch Cards",
         "description": "A trading cards store made with React, Java and Spring",
-        "url": "https://github.com/boubeejul/trabalho-final-react"
+        "url": "https://github.com/boubeejul/trabalho-final-react",
+        "article": false
     },
     {
         "title": "Simple Notepad",
         "description": "A simples notepad page using HTML, CSS and Javascript",
-        "url": "https://github.com/boubeejul/simple-notepad"
-    },
+        "url": "https://github.com/boubeejul/simple-notepad",
+        "article": false
+    }
 ]
 
 menu1ChangeContent = () => {
@@ -61,7 +73,8 @@ menu2ChangeContent = () => {
             <a href="${projects[i].url}" target="_blank">
                 <div class="container-project-box">
                     <div class="container-project-title">
-                        <img src="./assets/github-mark-white.svg" class="icon_projects"/> ${projects[i].title}
+                        ${!projects[i].article ? `<img src="./assets/github-mark-white.svg" class="icon_projects"/>` : "📄"}
+                        ${projects[i].title}
                     </div>
                 </div>
             </a>
@@ -70,7 +83,7 @@ menu2ChangeContent = () => {
 }
 
 menu3ChangeContent = () => {
-    subtitle.innerHTML = `Links for contact`
+    subtitle.innerHTML = `Links`
     containerDescription.innerHTML = `<div id="container-project"></div>`
 
     let containerProject = document.querySelector("#container-project")
